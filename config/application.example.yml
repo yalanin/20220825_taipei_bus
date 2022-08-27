@@ -1,0 +1,5 @@
+# Add configuration values here, as shown below.
+api_host: 'https://tdx.transportdata.tw'
+grant_type: 'your_grant_type'
+client_id: 'your_client_id'
+client_secret: 'your_client_secret'

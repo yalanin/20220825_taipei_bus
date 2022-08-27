@@ -1,3 +1,31 @@
-<%= form_tag search_lines_path do %>
-  請輸入公車號碼：<%= text_field_tag :bus_number %>
+<%= form_tag root_path, { method: :get} do %>
+  請輸入公車號碼：<%= text_field_tag :bus_number, @bus_number %>
+<% end %>
+<br />
+<br />
+
+<% if @forward %>
+  去程
+  <% @forward.each do |f| %>
+    站牌代碼: <%= f[:stop_uid] %>
+    <br />
+    站牌名稱: <%=  f[:name] %>
+  <br />
+    預估到達時間: <%= f[:arrival].nil? ? '尚未發車' : "#{f[:arrival]/60} 分鐘" %>
+    <br />
+    <br />
+  <% end %>
+<% end %>
+
+<% if @return %>
+  回程
+  <% @return.each do |f| %>
+    站牌代碼: <%= f[:stop_uid] %>
+    <br />
+    站牌名稱: <%=  f[:name] %>
+    <br />
+    預估到達時間: <%= f[:arrival].nil? ? '尚未發車' : "#{f[:arrival]/60} 分鐘" %>
+    <br />
+    <br />
+  <% end %>
 <% end %>
