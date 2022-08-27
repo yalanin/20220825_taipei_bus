@@ -10,7 +10,7 @@
     站牌代碼: <%= f[:stop_uid] %>
     <br />
     站牌名稱: <%=  f[:name] %>
-    <%= link_to '到站通知', broadcasts_path(stop_uid: f[:stop_uid]), method: :post if @record_count.zero? %>
+    <%= link_to '到站通知', broadcasts_path(stop_uid: f[:stop_uid], bus_number: @bus_number), method: :post if @record_count.zero? %>
   <br />
     預估到達時間: <%= f[:arrival].nil? ? '尚未發車' : "#{f[:arrival]/60} 分鐘" %>
     <br />

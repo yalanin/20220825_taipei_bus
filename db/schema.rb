@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2022_08_27_101252) do
     t.integer "user_id"
     t.integer "status", default: 0
     t.string "stop_uid"
+    t.string "bus_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["status"], name: "index_broadcasts_on_status"

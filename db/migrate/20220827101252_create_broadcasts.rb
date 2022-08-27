@@ -4,6 +4,7 @@ class CreateBroadcasts < ActiveRecord::Migration[6.0]
       t.references :user
       t.integer :status, default: 0
       t.string :stop_uid
+      t.string :bus_number
       t.timestamps null: false
     end
 

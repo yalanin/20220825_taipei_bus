@@ -2,7 +2,7 @@ class BroadcastsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    broadcast = current_user.broadcasts.new(stop_uid: params[:stop_uid])
+    broadcast = current_user.broadcasts.new(stop_uid: params[:stop_uid], bus_number: params[:bus_number])
     if broadcast.save
       redirect_to root_path, alert: '通知設定成功'
     else

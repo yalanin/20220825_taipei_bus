@@ -27,6 +27,16 @@ class Bus::Api
     end
   end
 
+  def check_bus_arrival_time(bus_number, stop_uid)
+    begin
+      path = "/api/basic/v2/Bus/EstimatedTimeOfArrival/City/Taipei/#{bus_number}?%24filter=StopUID%20eq%20%#{stop_uid}%27&%24format=JSON"
+      res = get_request(path)
+      res[0]
+    rescue => e
+      Rails.logger.info "check_bus_arrival_time exception: #{e}"
+    end
+  end
+
   private
 
   def access_token
