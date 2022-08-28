@@ -1,24 +1,4 @@
-# README
+# 說明
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 首頁輸入公車號碼，可查詢路線與公車到站時間
+* 可使用到站提醒通知，限登入後使用
