@@ -6,7 +6,6 @@ document.addEventListener('turbolinks:load', function(){
     connected() {
       // Called when the subscription is ready for use on the server
       // alert('hello');
-      console.log(consumer)
     },
 
     disconnected() {
