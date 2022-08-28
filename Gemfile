@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'figaro', '~> 1.2'
 gem 'pry'
+gem 'redis', '~> 4.8'
 gem 'whenever', '~> 1.0'
 
 group :development, :test do

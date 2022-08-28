@@ -13,6 +13,7 @@ class Bus::CheckStatus
         if res[:EstimateTime] <= 180
           records = Broadcast.where(id: broadcast.ids.split(','))
           users = User.where(id: broadcast.uid.split(','))
+          ActionCable.server.broadcast('broadcast_channel', broadcast.ids.split(','))
           records.update_all(status: 1)
         end
       end

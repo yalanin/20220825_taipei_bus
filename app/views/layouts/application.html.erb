@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <div id="broadcast_id"><%= current_user.try(:id) %></div>
     <% if current_user %>
       <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
       <%= link_to('修改密碼', edit_registration_path(:user)) %>

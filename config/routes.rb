@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   root 'lines#index'
 
   resources :broadcasts, only: %i[new create]
+
+  mount ActionCable.server => '/cable'
 end
